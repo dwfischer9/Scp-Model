@@ -1,10 +1,8 @@
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.ensemble import RandomForestClassifier
+
 
 
 def train_model(X_train, y_train):
-    vect = CountVectorizer()
-    training_vectors = vect.fit_transform(X_train)
-    model = MultinomialNB()
-    model.fit(training_vectors, y_train)
-    return model
+    rf = RandomForestClassifier(n_estimators=100, random_state=42)
+    rf.fit(X_train, y_train)
+    return rf

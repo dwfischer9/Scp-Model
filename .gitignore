@@ -1,3 +1,5 @@
 __pycache__
 .csv
 data/processed/freq.csv
+.scp6999.csv.icloud
+.DS_Store
